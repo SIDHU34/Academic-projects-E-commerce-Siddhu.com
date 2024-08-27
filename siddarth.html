@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Page Application</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffdacc;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #ffbf65;
+            color: 0065a2;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #0065a2;
+            font-weight: bold;
+        }
+
+        section {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #8dd7bf;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            color: #e77577; 
+        }
+
+        .product {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e77577; 
+            padding-bottom: 10px;
+        }
+
+        .product img {
+            width: 250px; /* Increased image width */
+            height: 250px; /* Increased image height */
+            object-fit: cover;
+            border-radius: 8px;
+        }
+          .add-to-cart {
+            background-color: #ff5c77;
+        }
+        .add-to-cart:hover {
+            background-color: #218838;
+        }
+        .buy-now {
+            background-color: #007bff;
+        }
+        .buy-now:hover {
+            background-color: #0056b3;
+          }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #003366; /* Dark blue background */
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #002244; /* Even darker blue on hover */
+        }
+
+        footer {
+            text-align: center;
+            padding: 2[=px;
+            background-color: #003366; 
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .toggle-link a {
+            color: #ff66b2; /* Pink text color */
+        }
+
+        .toggle-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><u>Fragrance Fresh</u></h1>
+        <nav>
+            <ul>
+                <li><a href="#product-catalog">Product Catalog</a></li>
+                <li><a href="#about-us">About Us</a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
+                <li><a href="#login">Login/Register</a></li>
+        <li> <a href="#cart">Cart (<span id="cart-count">0</span>)</li></a>
+
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Product Catalog Section -->
+        <section id="product-catalog">
+            <h2>Product Catalog</h2>
+            <div class="product">
+                <div>
+                    <h3><u>PRODUCTS:</u></h3>
+<h3>Clive Christian</h3>
+                    <p>Clive Christian Perfume is a UK-based independent luxury perfume house which sells products through its online store, at Harrods, Selfridges, and Fortnum & Mason in the UK as well as globally throughout America, Europe, Russia and the Middle East.</p>
+<p>price:178450rs</p>
+                </div>
+                <img src="C:\Users\baswa\Downloads\clive.jpg" alt="Clive Christian">
+            </div>
+            
+<button class="add-to-cart" onclick="addToCart('Product 1')">Add to Cart</button>
+                        <button class="buy-now" onclick="buyNow('Product 1')">Buy Now</button>
+                    </div>
+                </div>
+
+
+
+
+
+    <div class="container">
+        <!-- Product Catalog Section -->
+<section id="product-catalog">
+            <h2>Product Catalog</h2>
+            <div class="product">
+                <div>            
+<h3>Creed Royal Oud</h3>
+                    <p>Royal Oud by Creed is a Oriental Fougere fragrance for women and men. Royal Oud was launched in 2011. Royal Oud was created by Olivier Creed and Julien Rasquinet. Top notes are Pink Pepper, Lemon and Sicilian Bergamot; middle notes are Cedar, Angelica and Galbanum; base notes are Sandalwood, Agarwood (Oud) and Musk.</p>
+<p>price:41,960rs</p>
+                </div>
+                <img src="C:\Users\baswa\Downloads\creed.jpg" alt="Creed Royal Oud">
+            </div>
+            
+<button class="add-to-cart" onclick="addToCart('Product 1')">Add to Cart</button>
+                        <button class="buy-now" onclick="buyNow('Product 1')">Buy Now</button>
+                    </div>
+                </div>
+
+
+
+
+<div class="container">
+        <!-- Product Catalog Section -->
+<section id="product-catalog">
+            <h2>Product Catalog</h2>
+            <div class="product">
+                <div>
+                   
+<h3><Amouage Gold</h3>
+                    <p>Amouage or Amouage Gold is the first fragrance of Amouage. It was created by Guy Robert 1983. This is an intensive floral for evening wearing and special occasions. The top notes blend wild rose, lily-of-the-valley and silver frankincense. The heart notes include myrrh, orris and jasmine.</p>
+<p>price:26,560rs</p>
+                </div>
+                <img src="C:\Users\baswa\Downloads\amouage .jpg" alt="Amouge Gold">
+            </div>
+            
+<button class="add-to-cart" onclick="addToCart('Product 1')">Add to Cart</button>
+                        <button class="buy-now" onclick="buyNow('Product 1')">Buy Now</button>
+                    </div>
+                </div>
+
+
+
+
+<div class="container">
+        <!-- Product Catalog Section -->
+<section id="product-catalog">
+            <h2>Product Catalog</h2>
+            <div class="product">
+                <div>
+                   
+<h3>Chanel Grand Extrait</h3>
+                    <p></p>
+<p>price:348,600rs</p>
+                </div>
+                <img src="C:\Users\baswa\Downloads\channel grand.jpg" alt="Chanel Grand Extrait">
+            </div>
+            
+<button class="add-to-cart" onclick="addToCart('Product 1')">Add to Cart</button>
+                        <button class="buy-now" onclick="buyNow('Product 1')">Buy Now</button>
+                    </div>
+                </div>
+
+
+
+
+
+<div class="container">
+        <!-- Product Catalog Section -->
+<section id="product-catalog">
+            <h2>Product Catalog</h2>
+            <div class="product">
+                <div>
+                   
+<h3>Tom Ford Private Blend Shimmering Body Oil</h3>
+                    <p>A body oil that evokes the high-shine brilliance of the golden sun beaming on a private oasis for a Gold and Bronze shimmer. This silky scented oil adds a seductive gleam to the skin while tempting the senses with the scorching sensuality of Soleil Brûlant – the Private Blend fragrance mingling sunlit florals with warm amber.</p>
+<p>price:29050rs</p>
+                </div>
+                <img src="C:\Users\baswa\Downloads\tom ford.jpg" alt="Tom Ford Private Blend Shimmering Body Oil">
+            </div>
+            
+<button class="add-to-cart" onclick="addToCart('Product 1')">Add to Cart</button>
+                        <button class="buy-now" onclick="buyNow('Product 1')">Buy Now</button>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+ 
+
+<div class="container">
+        <!-- Product Catalog Section -->
+<section id="product-catalog">
+            <h2>Product Catalog</h2>
+            <div class="product">
+                <div>
+                   
+<h3>Baccarat Rouge 540 by Maison Francis Kurkdjian
+</h3>
+                    <p>Baccarat Rouge 540 is the result of the encounter between two symbols of excellence, the combined magic of Nature and Man transforming raw materials into a sensory element.
+
+Baccarat Rouge 540 is a luminous and intense fragrance with amber and woody floral notes, with a graphic and extremely condensed olfactory signature.</p>
+<p>price:24,500rs</p>
+                </div>
+                <img src="C:\Users\baswa\Downloads\Baccarat Rouge .jpg" alt="Baccarat Rouge 540 by Maison Francis Kurkdjian">
+            </div>
+            
+<button class="add-to-cart" onclick="addToCart('Product 1')">Add to Cart</button>
+                        <button class="buy-now" onclick="buyNow('Product 1')">Buy Now</button>
+                    </div>
+                </div>
+
+
+
+<div class="container">
+        <!-- Product Catalog Section -->
+<section id="product-catalog">
+            <h2>Product Catalog</h2>
+            <div class="product">
+                <div>
+
+<h3>Guerlain Les Absolus d'Orient - Santal Royal</h3>
+                    <p>Les Absolus d'Orient Santal Royal by Guerlain is a Oriental Woody fragrance for women and men. Les Absolus d'Orient Santal Royal was launched in 2014. The nose behind this fragrance is Thierry Wasser. Top notes are Jasmine and Neroli; middle notes are Rose, Cinnamon and Peach; base notes are Agarwood (Oud), Sandalwood, Leather, Amber and Musk.</p>
+<p>price:20,750rs</p>
+                </div>
+                <img src="C:\Users\baswa\Downloads\les.jpg" alt=""Guerlain Les Absolus d'Orient - Santal Royal>
+            </div>
+            
+<button class="add-to-cart" onclick="addToCart('Product 1')">Add to Cart</button>
+                        <button class="buy-now" onclick="buyNow('Product 1')">Buy Now</button>
+                    </div>
+                </div>
+
+
+
+
+            
+
+
+
+
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about-us">
+            <h2>About Us</h2>
+            <p>We are a company dedicated to providing high-quality products that meet the needs of our customers. Our mission is to offer innovative solutions and excellent customer service.Just like books are categorized by genre and not by names of
+authors, we organize scents based on their type and not brand
+names; making it easier for our guests to find “their” perfume.
+After all, the right fragrance must complement your personality –
+and that is what I strongly believe in…
+
+…we make you find what you love”</p>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section id="contact-us">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="contact-name">Name:</label>
+                    <input type="text" id="contact-name" name="contact-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-email">Email:</label>
+                    <input type="email" id="contact-email" name="contact-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-message">Message:</label>
+                    <textarea id="contact-message" name="contact-message" rows="5" required></textarea>
+                </div>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+         
+          
+       
+
+!-- Login/Registration Section -->
+<section id="Login/Register">
+        <div id="login" class="section">
+            <div id="login-form">
+                <h2>Login</h2>
+                <form action="/login" method="post">
+                    <label for="login-username">Username:</label>
+                    <input type="text" id="login-username" name="username" required>
+                    <label for="login-password">Password:</label>
+                    <input type="password" id="login-password" name="password" required>
+                    <input type="submit" value="Login">
+                </form>
+                <div class="toggle-link">
+                    <a href="#" onclick="showRegister()">Don't have an account? Register here</a>
+                </div>
+            </div>
+
+            <div id="register-form" style="display: none;">
+                <h2>Register</h2>
+                <form id="registration-form" action="/register" method="post">
+                    <label for="register-username">Username:</label>
+                    <input type="text" id="register-username" name="username" required>
+                    <label for="register-email">Email:</label>
+                    <input type="email" id="register-email" name="email" required>
+                    <label for="register-password">Password:</label>
+                    <input type="password" id="register-password" name="password" required>
+                    <label for="register-confirm-password">Confirm Password:</label>
+                    <input type="password" id="register-confirm-password" name="confirm-password" required>
+                    <input type="submit" value="Register">
+                </form>
+                <div class="toggle-link">
+                    <a href="#" onclick="showLogin()">Already have an account? Login here</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+    <footer>
+        <p>Presented by Fragrance Fresh.</p>
+    </footer>
+
+    <script>
+        // Toggle between Login and Register forms
+        function showRegister() {
+            document.getElementById('login-form').style.display = 'none';
+            document.getElementById('register-form').style.display = 'block';
+        }
+
+        function showLogin() {
+            document.getElementById('register-form').style.display = 'none';
+            document.getElementById('login-form').style.display = 'block';
+        }
+
+        // Client-side validation for Registration/Login form
+        document.getElementById('registration-form').addEventListener('submit', function(event) {
+            const email = document.getElementById('register-email').value;
+            const password = document.getElementById('register-password').value;
+
+            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            const passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+
+            if (!email.match(emailPattern)) {
+                alert("Please enter a valid email address.");
+                event.preventDefault();
+                return;
+            }
+
+            if (!password.match(passwordPattern)) {
+                alert("Password must be between 6 to 20 characters and contain at least one numeric digit, one uppercase, and one lowercase letter.");
+                event.preventDefault();
+                return;
+            }
+
+            alert("Form submitted successfully!");
+        });
+
+        // Client-side validation for Contact form
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            
+
+            const email = document.getElementById('contact-email').value;
+
+            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+            if (!email.match(emailPattern)) {
+                alert("Please enter a valid email address.");
+                event.preventDefault();
+            } else {
+                alert("Message sent successfully!");
+            }
+        });
+    </script>
+</body>
+</html>
+
